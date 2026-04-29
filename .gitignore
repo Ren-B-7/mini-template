@@ -44,10 +44,12 @@
 *.out.stripped
 
 # Build directories
-build/
+build/*
+!build/.gitkeep
 out/
 dist/
-bin/
+bin/*
+!bin/.gitkeep
 obj/
 target/
 

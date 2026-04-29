@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main() {
-    printf("Hello, Mini Project Template!
-");
-    return 0;
+int main(void)
+{
+	printf("Hello, Mini Project Template!\n");
+	return 0;
 }
