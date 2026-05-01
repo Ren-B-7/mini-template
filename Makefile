@@ -19,7 +19,7 @@ CFLAGS = -std=c11 -pedantic -Wall -Wextra -Werror -Wformat=2 -Wshadow -Wconversi
 # Hardening flags
 HARDENING = -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIE -fstack-clash-protection -fcf-protection
 # Optimization flags
-OPTFLAGS = -O2 -march=native -flto
+OPTFLAGS = -O3 -march=native -flto
 
 # Linker flags
 LDFLAGS = -lm -pie -Wl,-z,relro,-z,now
