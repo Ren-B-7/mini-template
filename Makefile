@@ -61,9 +61,11 @@ FORMAT_FILES = $(SRCS) $(HDRS)
 format:
 	@echo "Formatting code..."
 	@clang-format -style=file:./.clang-format -i $(FORMAT_FILES)
+	mbake format --config ./.bake.toml Makefile
 
 # Run static analysis with clang-tidy
 CLANG_TIDY_CHECKS = -checks=-*,readability-*,bugprone-*,performance-*,clang-analyzer-*
 lint:
 	@echo "Running static analysis..."
 	@clang-tidy $(CLANG_TIDY_CHECKS) $(SRCS) -- $(CFLAGS)
+	mbake validate --config ./.bake.toml Makefile
